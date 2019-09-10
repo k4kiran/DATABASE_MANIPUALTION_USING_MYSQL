@@ -1,14 +1,20 @@
 @echo off
 
-echo Commit on GitHub/GitLab
-echo.
-
-set /p comment="Enter comment: "
-git.exe add .
-git.exe commit -m "%comment%"
-git.exe push
+echo Commit on GitHub
 
 echo.
-echo All done :)
+
+set /p comment="Enter comment:
+"
+git add .
+
+git commit -m "%comment%"
+
+git push
+
+
+echo.
+echo Committed Successfullly :)
+
 
 pause
