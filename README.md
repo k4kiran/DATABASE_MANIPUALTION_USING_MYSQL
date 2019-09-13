@@ -1,4 +1,7 @@
 # Database_Manipulation_Using_MYSQL
+
+<img align="right" width="500" height="300" src="https://upload.wikimedia.org/wikipedia/en/thumb/6/62/MySQL.svg/1200px-MySQL.svg.png">
+
 * [INTRODUCTION](#introduction)
 * [DATATYPES](https://github.com/k4kiran/Database_Manipulation_Using_MYSQL/blob/master/datatypes.md)
 * [GENERAL COMMANDS](#general-commands)
@@ -12,7 +15,6 @@
 * [MANAGING INDEXES](#managing-indexes)
 * [MANAGING VIEWS](#managing-views)
 * [MANAGING TRIGGERS](#managing-triggers)
-
 
 ## GENERAL COMMANDS
 Show available Databases
