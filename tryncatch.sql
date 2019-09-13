@@ -1,6 +1,0 @@
-BEGIN TRY
-	SELECT *  FROM mytable;
-END TRY
-BEGIN CATCH
-	SELECT *  FROM mytable;
-END CATCH;
