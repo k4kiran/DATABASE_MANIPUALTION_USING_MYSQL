@@ -1,6 +1,6 @@
 # Database_Manipulation_Using_MYSQL
 * [INTRODUCTION](#introduction)
-* [DATATYPES](#https://github.com/k4kiran/Database_Manipulation_Using_MYSQL/blob/master/datatypes.md)
+* [DATATYPES](https://github.com/k4kiran/Database_Manipulation_Using_MYSQL/blob/master/datatypes.md)
 * [GENERAL COMMANDS](#general-commands)
 * [MANAGING TABLES](#managing-tables)
 * [MODIFYING DATA](#modifying-data)
