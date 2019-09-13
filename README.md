@@ -1,4 +1,17 @@
 # Database_Manipulation_Using_MYSQL
+* [INTRODUCTION](#)
+* [GENERAL COMMANDS](#general-commands)
+* [MANAGING TABLES](#managing-tables)
+* [MODIFYING DATA](#modifying-data)
+* [QUERING DATA FROM A TABLE](#querying-data-from-a-table)
+* [QUERING FROM MULTIPLE TABLES](#querying-from-multiple-tables)
+* [SQL AGGREGATE FUNCTIONS](#sql-aggregate-functions)
+* [SQL OPERATORS](#using-sql-operators)
+* [SQL CONSTRAINTS](#using-sql-constraints)
+* [MANAGING INDEXES](#managing-indexes)
+* [MANAGING VIEWS](#managing-views)
+* [MANAGING TRIGGERS](#managing-triggers)
+
 
 ## GENERAL COMMANDS
 Show available Databases
@@ -353,4 +366,64 @@ Delete a specific trigger
 ```sql
 DROP TRIGGER trigger_name
 ```
+## INTRODUCTION
 
+## MySQL storage engines
+
+* A storage engine is a software module that a database management system uses to create, read, update data from a database.
+* There are two types of storage engines in MySQL: transactional and non-transactional.
+* For MySQL 5.5 and later, the default storage engine is InnoDB
+
+```sql
+mysql> SHOW ENGINES\G
+```
+#### Finding version of MYSQL from client
+```sql
+SHOW VARIABLES LIKE "%version%";
+```
+### MySQL supported storage engines:
+
+* [InnoDB](#innodb)
+* [MyISAM](#myisam)
+* [Memory](#memory)
+* [CSV](#csv)
+* [Merge](#merge)
+* [Archive](#archive)
+* [Federated](#federated)
+* [Blackhole](#blackhole)
+
+
+## Specifying and altering storage engines
+```sql
+CREATE TABLE Cars(Id INTEGER PRIMARY KEY, Name VARCHAR(50), 
+-> Cost INTEGER) ENGINE='MyISAM';
+
+SELECT ENGINE FROM information_schema.TABLES
+-> WHERE TABLE_SCHEMA='mydb'
+-> AND TABLE_NAME='Cars';
+
+ALTER TABLE Cars ENGINE='MyISAM';
+```
+### InnoDB
+InnoDB is the most widely used storage engine with transaction support. It is an ACID compliant storage engine. It supports row-level locking, crash recovery and multi-version concurrency control. It is the only engine which provides foreign key referential integrity constraint. Oracle recommends using InnoDB for tables except for specialized use cases.
+
+### MYISAM
+MyISAM is the original storage engine. It is a fast storage engine. It does not support transactions. MyISAM provides table-level locking. It is used mostly in Web and data warehousing.
+
+### MEMORY
+Memory storage engine creates tables in memory. It is the fastest engine. It provides table-level locking. It does not support transactions. Memory storage engine is ideal for creating temporary tables or quick lookups. The data is lost when the database is restarted.
+
+### CSV
+CSV stores data in CSV files. It provides great flexibility because data in this format is easily integrated into other applications.
+
+### MERGE
+Merge operates on underlying MyISAM tables. Merge tables help manage large volumes of data more easily. It logically groups a series of identical MyISAM tables, and references them as one object. Good for data warehousing environments.
+
+### ARCHIVE
+Archive storage engine is optimised for high speed inserting. It compresses data as it is inserted. It does not support transactions. It is ideal for storing and retrieving large amounts of seldom referenced historical, archived data.
+
+### BLACKHOLE
+The Blackhole storage engine accepts but does not store data. Retrievals always return an empty set. The functionality can be used in distributed database design where data is automatically replicated, but not stored locally. This storage engine can be used to perform performance tests or other testing.
+
+### FEDERATED
+Federated storage engine offers the ability to separate MySQL servers to create one logical database from many physical servers. Queries on the local server are automatically executed on the remote (federated) tables. No data is stored on the local tables. It is good for distributed environments.
