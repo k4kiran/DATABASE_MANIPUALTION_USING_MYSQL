@@ -1,5 +1,5 @@
 # Database_Manipulation_Using_MYSQL
-* [INTRODUCTION](#introduction)
+* [INTRODUCTION](#introduction  )
 * [GENERAL COMMANDS](#general-commands)
 * [MANAGING TABLES](#managing-tables)
 * [MODIFYING DATA](#modifying-data)
