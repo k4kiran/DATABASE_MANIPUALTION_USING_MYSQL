@@ -1,0 +1,1 @@
+source D:/users/kiran_bal/work/git/KIRAN BAL/SQL/Database_Manipulation_Using_MYSQL/shopping_database/queries_create/create_table1.sql

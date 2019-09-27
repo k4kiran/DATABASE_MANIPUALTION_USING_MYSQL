@@ -1,0 +1,27 @@
+/*comments in mysql*/
+
+mypath:  source D:/users/kiran_bal/work/git/KIRAN BAL/MYSQL/
+
+CREATE DATABASE <database name>;
+eg:- CREATE DATABASE mydb;
+
+USE <database name>;
+USE mydb;
+
+DROP DATABASE <database name>;
+eg:- DROP DATABASE mydb;
+
+SHOW TABLES
+
+DESCRIBE tablename;
+
+CREATE TABLE <table name>
+(empid varchar(20) primary key,
+empname varchar(20),
+joining_date date);
+
+INSERT INTO <tablename>
+VALUES('t0826','emp1','2019-03-24');
+
+SELECT * FROM <table name>;
+
